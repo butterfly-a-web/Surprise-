@@ -1,0 +1,290 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family:'Poppins',sans-serif;
+  background:#0f0f1a;
+  color:white;
+  overflow-x:hidden;
+}
+
+.hidden{
+  display:none;
+}
+
+/* INTRO */
+
+.intro-screen{
+  height:100vh;
+  background:linear-gradient(135deg,#ff5ca8,#1a1a2e); /* FIXED */
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  padding:20px;
+}
+
+.intro-content{
+  animation:fadeUp 2s ease;
+}
+
+.intro-content h1{
+  font-size:5rem;
+  font-family:'Great Vibes',cursive;
+}
+
+.intro-content h2{
+  letter-spacing:5px;
+  margin-bottom:10px;
+}
+
+.nickname{
+  margin-top:15px;
+  font-size:1.1rem;
+  opacity:0.9;
+}
+
+.intro-content h3{
+  font-size:2rem;
+  margin-top:10px;
+}
+
+button{
+  margin-top:30px;
+  padding:14px 32px;
+  border:none;
+  border-radius:50px;
+  background:white;
+  color:#ff4f95;
+  font-size:1rem;
+  cursor:pointer;
+  transition:0.3s;
+  font-weight:600;
+}
+
+button:hover{
+  transform:scale(1.08);
+}
+
+@keyframes fadeUp{
+  from{
+    opacity:0;
+    transform:translateY(40px);
+  }
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
+/* HERO */
+
+.hero-section{
+  min-height:100vh;
+  position:relative;
+  background:url('https://images.unsplash.com/photo-1511988617509-a57c8a288659?q=80&w=1500&auto=format&fit=crop') center/cover;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  padding:50px 20px;
+}
+
+.overlay{
+  position:absolute;
+  inset:0;
+  background:rgba(0,0,0,0.55);
+}
+
+.hero-content{
+  position:relative;
+  z-index:2;
+}
+
+.profile-img{
+  width:220px;
+  height:220px;
+  border-radius:50%;
+  object-fit:cover;
+  border:5px solid white;
+  margin-bottom:20px;
+}
+
+.hero-content h1{
+  font-size:4rem;
+  font-family:'Great Vibes',cursive;
+  margin-bottom:25px;
+}
+
+.info-box{
+  background:rgba(255,255,255,0.08);
+  padding:30px;
+  border-radius:25px;
+  backdrop-filter:blur(10px);
+  max-width:450px;
+  margin:auto;
+}
+
+.info-box p{
+  margin:12px 0;
+  font-size:1.1rem;
+}
+
+.info-box span{
+  color:#ff8ed0;
+  font-weight:600;
+}
+
+/* GALLERY FIXED */
+
+.gallery-section{
+  padding:80px 20px;
+  text-align:center;
+}
+
+.gallery-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:20px;
+  max-width:900px;
+  margin:auto;
+}
+
+.photo-card{
+  width:100%;
+  height:360px;   /* 👈 main fix (bada + equal) */
+  overflow:hidden;
+  border-radius:20px;
+  box-shadow:0 0 15px pink;
+}
+
+.photo-card img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+}
+
+.tall{
+  grid-row:span 2;
+}
+
+.wide{
+  grid-column:span 2;
+}
+
+/* MESSAGE */
+
+.message-section{
+  padding:100px 20px;
+}
+
+.message-section h2{
+  text-align:center;
+  font-size:3rem;
+  margin-bottom:40px;
+}
+
+.message-box{
+  max-width:850px;
+  margin:auto;
+  background:rgba(255,255,255,0.08);
+  padding:40px;
+  border-radius:30px;
+  line-height:2;
+  text-align:center;
+  white-space:pre-line;
+}
+
+/* COUNTDOWN */
+
+.countdown-section{
+  padding:100px 20px;
+  text-align:center;
+}
+
+.countdown-section h2{
+  font-size:3rem;
+  margin-bottom:40px;
+}
+
+.countdown-box{
+  display:flex;
+  justify-content:center;
+  gap:20px;
+  flex-wrap:wrap;
+}
+
+.countdown-box div{
+  background:rgba(255,255,255,0.08);
+  padding:30px;
+  min-width:130px;
+  border-radius:25px;
+}
+
+.countdown-box span{
+  font-size:3rem;
+  font-weight:700;
+  color:#ff8ed0;
+}
+
+.countdown-box p{
+  margin-top:10px;
+}
+
+.final-section{
+  padding:100px 20px;
+  text-align:center;
+}
+
+/* POPUP */
+
+.popup{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,0.75);
+  display:none;
+  justify-content:center;
+  align-items:center;
+  z-index:999;
+}
+
+.popup-content{
+  background:#1f1f33;
+  padding:40px;
+  border-radius:30px;
+  text-align:center;
+  max-width:400px;
+}
+
+.popup-content h1{
+  font-family:'Great Vibes',cursive;
+  font-size:4rem;
+  margin-bottom:20px;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.intro-content h1{
+  font-size:3.5rem;
+}
+
+.hero-content h1{
+  font-size:3rem;
+}
+
+.gallery-section h2,
+.message-section h2{
+  font-size:2.2rem;
+}
+
+.wide{
+  grid-column:span 1;
+}
+
+}
