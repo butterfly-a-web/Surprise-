@@ -29,7 +29,7 @@ function closePopup(){
 
 
 // COUNTDOWN TIMER
-const birthday = new Date('May 25, 2026 00:00:00').getTime();
+const birthday = new Date('May 29, 2026 00:00:00').getTime();
 
 const timer = setInterval(() => {
 
